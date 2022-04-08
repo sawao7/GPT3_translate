@@ -3,13 +3,9 @@ from flaskr import app
 
 import openai
 import os
-from os.path import join, dirname
-from dotenv import load_dotenv
 
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
 
-openai.api_key = os.environ.get("API_KEY")
+openai.api_key = os.environ["API_KEY"]
 # response = openai.Completion.create(
 #     engine="davinci", prompt="Say this is a test", temperature=0, max_tokens=6)
 
